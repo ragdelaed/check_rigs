@@ -63,7 +63,7 @@ do
 
 	echo clearing thermals and throttles
 	ssh -o ConnectTimeout=10 $rig "clear-thermals"
-
-
+	echo 
+	echo
 done
 
