@@ -1,7 +1,8 @@
-#/bin/bash
+#!/bin/bash
 
 hostname=$(hostname)
 maintenance_hosts=("r1_15")
+logger "running check_rigs"
 
 for pid in $(ps -ef|grep r1|awk '{print $2}')
 do 	
