@@ -9,7 +9,7 @@ do
 	echo killing $pid
 	kill -9 $pid; 
 done
-rigs=$(grep r1 /etc/hosts|awk '{print $2}')
+rigs=$(egrep "[A-Z][0-9]" /etc/hosts|awk '{print $2}')
 echo $rigs
 
 reboot_rig () {
