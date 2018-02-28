@@ -1,7 +1,7 @@
 #!/bin/bash
 
 hostname=$(hostname)
-maintenance_hosts=("r1_15")
+maintenance_hosts=("R1_19 R1_13")
 logger "running check_rigs"
 
 for pid in $(ps -ef|grep r1|awk '{print $2}')
@@ -30,7 +30,7 @@ sleep 20
 for rig in $(echo $rigs)
 do
 	if [[ " ${maintenance_hosts[@]} " =~ " $rig " ]]; then
-		echo matched maintenance, moving on
+		echo matched maintenance for $rig, moving on
 		echo 
 		continue
 	fi	
