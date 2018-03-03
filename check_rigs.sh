@@ -1,7 +1,7 @@
 #!/bin/bash
 
 hostname=$(hostname)
-maintenance_hosts=("R1_19 R1_13")
+maintenance_hosts=("")
 logger "running check_rigs"
 
 for pid in $(ps -ef|grep r1|awk '{print $2}')
@@ -15,15 +15,21 @@ echo $rigs
 reboot_rig () {
 
 rack_loc=$1
-rig_on=$(grep $rack_loc /root/codesend_codes |grep on|cut -f 3 -d ,)
-rig_off=$(grep $rack_loc /root/codesend_codes |grep off|cut -f 3 -d ,)
-
 echo $hostname - rebooting $rack_loc
 
-for x in `seq 10`; do $rig_off; done
-sleep 20
-for x in `seq 10`; do $rig_on; done
-sleep 20
+for x in `seq 10`
+do 
+	$(grep -i $rack_loc /root/codesend_codes |grep off|cut -f 3 -d ,)
+done
+
+sleep 10
+
+for x in `seq 10`
+do 
+	$(grep -i $rack_loc /root/codesend_codes |grep on|cut -f 3 -d ,)
+done
+
+sleep 10
 
 }
 
