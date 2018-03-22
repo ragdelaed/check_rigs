@@ -16,6 +16,7 @@ reboot_rig () {
 
 rack_loc=$1
 echo $hostname - rebooting $rack_loc
+logger "$hostname - rebooting $rack_loc"
 
 for x in `seq 10`
 do 
