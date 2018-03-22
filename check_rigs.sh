@@ -4,7 +4,7 @@ hostname=$(hostname)
 maintenance_hosts=("")
 logger "running check_rigs"
 
-for pid in $(ps -ef|grep r1|awk '{print $2}')
+for pid in $(ps -ef|grep -i r1|awk '{print $2}')
 do 	
 	echo killing $pid
 	kill -9 $pid; 
@@ -48,7 +48,7 @@ do
 		echo "Host $rig found"
 	else
 		logger "$hostname - rebooting $rig due to no ping"
-		echo -e  "$hostname - rebooting $rig due to no ping"|mail -s "$hostname - rebooting $rig due to no ping" ragdelaed@ragdelaed.com
+		#echo -e  "$hostname - rebooting $rig due to no ping"|mail -s "$hostname - rebooting $rig due to no ping" ragdelaed@ragdelaed.com
 		reboot_rig $rig
 	fi
 
@@ -58,12 +58,12 @@ do
 	if [ "$mem_state" = "1" ]
 	then
 		logger "$hostname - rebooting $rig due to memstate issue"
-		echo -e  "$hostname - rebooting $rig due to memstate issue"|mail -s "$hostname - rebooting $rig due to memstate" ragdelaed@ragdelaed.com
+		#echo -e  "$hostname - rebooting $rig due to memstate issue"|mail -s "$hostname - rebooting $rig due to memstate" ragdelaed@ragdelaed.com
 		reboot_rig $rig
 	elif [ -z "$mem_state" ]
 	then
 		logger "$hostname - rebooting $rig due to ssh timeout"
-		echo -e  "$hostname - rebooting $rig due to ssh timeout"|mail -s "$hostname - rebooting $rig due to ssh timeout" ragdelaed@ragdelaed.com
+		#echo -e  "$hostname - rebooting $rig due to ssh timeout"|mail -s "$hostname - rebooting $rig due to ssh timeout" ragdelaed@ragdelaed.com
 		reboot_rig $rig
 		
 	fi
