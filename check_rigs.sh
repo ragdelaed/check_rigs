@@ -15,12 +15,9 @@ echo $rigs
 reboot_rig () {
 
 rack_loc=$1
-<<<<<<< HEAD
 rig_on=$(grep $rack_loc /root/check_rigs/"$hostname"_codesend_codes |grep on|cut -f 3 -d ,)
 rig_off=$(grep $rack_loc /root/check_rigs/"$hostname"_codesend_codes |grep off|cut -f 3 -d ,)
 
-=======
->>>>>>> 3f8818ae6f98480be1868410acd70489a2e687b8
 echo $hostname - rebooting $rack_loc
 logger "$hostname - rebooting $rack_loc"
 

@@ -18,3 +18,24 @@ TMD01,on,/root/check_rigs/codesend 4273411 -l 180 -p 0
 TMD01,off,/root/check_rigs/codesend 4273420 -l 180 -p 0
 TMD02,on,/root/check_rigs/codesend 4265731 -l 180 -p 0
 TMD02,off,/root/check_rigs/codesend 4265740 -l 180 -p 0
+r1_10,on,/root/check_rigs/codesend 21811 -l 179 -p 0
+r1_10,off,/root/check_rigs/codesend 21820 -l 179 -p 0
+r1_11,on,/root/check_rigs/codesend 21955 -l 179 -p 0
+r1_11,off,/root/check_rigs/codesend 21964 -l 179 -p 0
+r1_12,on,/root/check_rigs/codesend 22275 -l 179 -p 0
+r1_12,off,/root/check_rigs/codesend 22284 -l 179 -p 0
+r1_13,on,/root/check_rigs/codesend 23811 -l 179 -p 0
+r1_13,off,/root/check_rigs/codesend 23820 -l 179 -p 0
+r1_14,on,/root/check_rigs/codesend 29955 -l 179 -p 0
+r1_14,off,/root/check_rigs/codesend 29964 -l 179 -p 0
+r1_15,on,/root/check_rigs/codesend 121811 -l 179 -p 0
+r1_15,off,/root/check_rigs/codesend 121820 -l 179 -p 0
+r1_16,on,/root/check_rigs/codesend 121955 -l 179 -p 0
+r1_16,off,/root/check_rigs/codesend 121964 -l 179 -p 0
+r1_17,on,/root/check_rigs/codesend 122275 -l 179 -p 0
+r1_17,off,/root/check_rigs/codesend 122284 -l 179 -p 0
+r1_18,on,/root/check_rigs/codesend 123811 -l 179 -p 0
+r1_18,off,/root/check_rigs/codesend 123820 -l 179 -p 0
+r1_19,on,/root/check_rigs/codesend 129955 -l 179 -p 0
+r1_19,off,/root/check_rigs/codesend 129964 -l 179 -p 0
+
